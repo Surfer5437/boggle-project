@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Welcome to Boggle</title>
+</head>
+<body>
+    <div class='h1'>Welcome to Boggle</div>
+    <label class='h3' id='score'>Score</label>
+    <label class='h3' id='timer'>Timer</label>
+    <div class='container' id="boggle_board">
+    {% for row in session['boggle_game'] %}
+    <div class="row offset-md-1">
+        {% for letter in row %}
+        <div class='col-md-2 tile ' id="letter">{{letter}}</div>
+        {% endfor %}
+    </div>
+
+    {% endfor %}
+    </div>
+    <br>
+    <div class="cont container">
+    <form onsubmit="return false">
+        <input class="form-control form-control-sm" type="text"id="word" placeholder="Enter word found here.">
+        <br>
+        <button type="button" class="btn btn-primary" id="send_word">Send Answer!</button>
+    </form>
+</div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="/static/app.js"></script>
+</html>

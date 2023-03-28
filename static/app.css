@@ -1,0 +1,32 @@
+#letter{
+    font: 6vw bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border: 2px solid blue;
+}
+.h1{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.h3{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#boggle_board{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.cont{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
